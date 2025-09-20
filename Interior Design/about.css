@@ -1,0 +1,235 @@
+:root {
+  --primary: #8C6A5D;
+  --secondary: #F4EDE4;
+  --accent: #D49A89;
+  --text: #333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--secondary);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 60px;
+  background: #fff;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: var(--primary);
+}
+
+header .cta-btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+/* ---------- HERO SECTION ---------- */
+.page-hero {
+  text-align: center;
+  padding: 0px 10px 10px;
+}
+
+.page-hero h1 {
+  font-size: 42px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  font-size: 18px;
+  color: var(--text);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ---------- ABOUT SECTION ---------- */
+.about-content {
+  max-width: 1200px;
+  margin: 5px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h2 {
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.02);
+}
+
+/* ---------- TEAM SECTION ---------- */
+.team {
+  background: #fff;
+  padding: 0px 20px;
+  text-align: center;
+}
+
+.team h2 {
+  color: var(--primary);
+  margin-bottom: 40px;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-member {
+  background: var(--secondary);
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.team-member h4 {
+  margin: 10px 0 5px;
+}
+
+.team-member p {
+  color: #777;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px 20px;
+    align-items: flex-start;
+  }
+
+  header nav {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  header nav a {
+    display: inline-block;
+    margin: 5px 10px 5px 0;
+  }
+
+  .page-hero h1 {
+    font-size: 28px;
+  }
+
+  .page-hero p {
+    font-size: 16px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-text, .about-image {
+    min-width: 100%;
+  }
+
+  .team-members {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .team-member {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  header .logo {
+    font-size: 20px;
+  }
+
+  .page-hero h1 {
+    font-size: 24px;
+  }
+
+  .page-hero p {
+    font-size: 15px;
+  }
+
+  .about-text h2 {
+    font-size: 20px;
+  }
+
+  .team h2 {
+    font-size: 22px;
+  }
+
+  .team-member h4 {
+    font-size: 16px;
+  }
+
+  .team-member p {
+    font-size: 14px;
+  }
+}

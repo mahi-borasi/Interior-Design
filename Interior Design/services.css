@@ -1,0 +1,170 @@
+:root {
+  --primary: #8C6A5D;
+  --secondary: #F4EDE4;
+  --accent: #D49A89;
+  --text: #333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--secondary);
+  color: var(--text);
+}
+
+/* ----------- HEADER ----------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  background: #fff;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: var(--primary);
+}
+
+header .cta-btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+/* ----------- PAGE HERO ----------- */
+.page-hero {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.page-hero h1 {
+  font-size: 36px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  font-size: 16px;
+  color: var(--text);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ----------- SERVICES SECTION ----------- */
+.services {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  margin: 20px;
+  color: var(--primary);
+}
+
+.service-card p {
+  margin: 0 20px 20px;
+  color: #555;
+}
+
+/* ----------- FOOTER ----------- */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ----------- MEDIA QUERIES ----------- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px;
+  }
+
+  header nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .page-hero h1 {
+    font-size: 28px;
+  }
+
+  .page-hero p {
+    font-size: 14px;
+  }
+
+  .service-card img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero h1 {
+    font-size: 24px;
+  }
+
+  .page-hero p {
+    font-size: 13px;
+  }
+
+  header .cta-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .service-card img {
+    height: 160px;
+  }
+}
+ 
